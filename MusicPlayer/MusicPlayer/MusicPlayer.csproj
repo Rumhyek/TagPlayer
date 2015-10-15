@@ -99,10 +99,34 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLayer\Location.cs" />
+    <Compile Include="BusinessLayer\Song.cs" />
+    <Compile Include="BusinessLayer\SongData.cs" />
+    <Compile Include="BusinessLayer\Tag.cs" />
+    <Compile Include="BusinessLayer\TagType.cs" />
+    <Compile Include="DataLayer\DataContext.cs" />
+    <Compile Include="DataLayer\IDataLayer.cs" />
+    <Compile Include="DataLayer\MusicPlayerEntities.cs" />
+    <Compile Include="DataLayer\SContext.cs" />
+    <Compile Include="DataLayer\SongParams.cs" />
+    <Compile Include="DataLayer\TagParams.cs" />
+    <Compile Include="DataLayer\tblLocation.cs" />
+    <Compile Include="DataLayer\tblSong.cs" />
+    <Compile Include="DataLayer\tblSongTag.cs" />
+    <Compile Include="DataLayer\tblTag.cs" />
+    <Compile Include="DataLayer\tblTagType.cs" />
+    <Compile Include="DataLayer\TestDataContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceLayer\ApplySongToTagServices.cs" />
+    <Compile Include="ServiceLayer\ApplyTagToSongServices.cs" />
+    <Compile Include="ServiceLayer\MusicPlayerHubServices.cs" />
+    <Compile Include="ServiceLayer\SongSortingOptions.cs" />
+    <Compile Include="ServiceLayer\SongViewServices.cs" />
+    <Compile Include="ServiceLayer\TagSortingOptions.cs" />
+    <Compile Include="ServiceLayer\TagViewServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -129,6 +153,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.UAP.2015, Version=3.9.0">
+      <Name>SQLite for Universal App Platform</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
