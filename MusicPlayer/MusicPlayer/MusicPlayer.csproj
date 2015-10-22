@@ -120,13 +120,25 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceLayer\ActiveSongVM.cs" />
+    <Compile Include="ServiceLayer\ActiveTagVM.cs" />
+    <Compile Include="ServiceLayer\AddLocationVM.cs" />
+    <Compile Include="ServiceLayer\AddTagVM.cs" />
     <Compile Include="ServiceLayer\ApplySongToTagServices.cs" />
     <Compile Include="ServiceLayer\ApplyTagToSongServices.cs" />
+    <Compile Include="ServiceLayer\CurrentTagVM.cs" />
+    <Compile Include="ServiceLayer\LocationVM.cs" />
     <Compile Include="ServiceLayer\MusicPlayerHubServices.cs" />
+    <Compile Include="ServiceLayer\NowPlayingListVM.cs" />
+    <Compile Include="ServiceLayer\SelectableTagVM.cs" />
+    <Compile Include="ServiceLayer\SongListVM.cs" />
     <Compile Include="ServiceLayer\SongSortingOptions.cs" />
     <Compile Include="ServiceLayer\SongViewServices.cs" />
+    <Compile Include="ServiceLayer\SongVM.cs" />
+    <Compile Include="ServiceLayer\TagListVM.cs" />
     <Compile Include="ServiceLayer\TagSortingOptions.cs" />
     <Compile Include="ServiceLayer\TagViewServices.cs" />
+    <Compile Include="ServiceLayer\TagVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

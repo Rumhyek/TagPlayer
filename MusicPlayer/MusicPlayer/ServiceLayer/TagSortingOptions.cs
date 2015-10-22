@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.ServiceLayer
 {
-    class TagSortingOptions
+    public class TagSortingOptions
     {
+        public Enum SortType { get; set; }
     }
 }
