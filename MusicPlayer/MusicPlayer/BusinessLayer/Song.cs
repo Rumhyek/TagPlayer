@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.BusinessLayer
 {
-    class Song
+    public class Song
     {
         public int SongID { get; set; }
         public string Name { get; set; }

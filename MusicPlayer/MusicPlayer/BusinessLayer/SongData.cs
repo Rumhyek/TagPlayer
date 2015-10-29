@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.BusinessLayer
 {
-    class SongData
+    public class SongData
     {
         public string FilePath { get; set; }
 
-        public SongData(string)
+        public SongData(string bug)
         {
 
         }

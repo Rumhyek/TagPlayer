@@ -12,11 +12,11 @@ namespace MusicPlayer.ServiceLayer
         private Song ActiveSong { get; set; }
 
         public ApplySongToTagServices(int songID)
-        {
+        { 
 
         }
 
-        public ActiveSongVM ActiveSong()
+        public ActiveSongVM GetActiveSong()
         {
             throw new NotImplementedException();
         }

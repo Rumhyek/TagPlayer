@@ -133,10 +133,12 @@
     <Compile Include="ServiceLayer\SelectableTagVM.cs" />
     <Compile Include="ServiceLayer\SongListVM.cs" />
     <Compile Include="ServiceLayer\SongSortingOptions.cs" />
+    <Compile Include="ServiceLayer\SongSortOrder.cs" />
     <Compile Include="ServiceLayer\SongViewServices.cs" />
     <Compile Include="ServiceLayer\SongVM.cs" />
     <Compile Include="ServiceLayer\TagListVM.cs" />
     <Compile Include="ServiceLayer\TagSortingOptions.cs" />
+    <Compile Include="ServiceLayer\TagSortOrder.cs" />
     <Compile Include="ServiceLayer\TagViewServices.cs" />
     <Compile Include="ServiceLayer\TagVM.cs" />
   </ItemGroup>
@@ -167,7 +169,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="SQLite.UAP.2015, Version=3.9.0">
+    <SDKReference Include="SQLite.UAP.2015, Version=3.9.1">
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>
   </ItemGroup>
