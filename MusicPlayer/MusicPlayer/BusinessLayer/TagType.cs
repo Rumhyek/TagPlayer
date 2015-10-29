@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.BusinessLayer
 {
-    class TagType
+   public class TagType
     {
         public int TagTypeID { get; set; }
         public string TypeName { get; set; }

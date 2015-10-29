@@ -10,7 +10,7 @@ namespace MusicPlayer.BusinessLayer
     {
         public string FilePath { get; set; }
 
-        public SongData()
+        public SongData(string bug)
         {
 
         }
