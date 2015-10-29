@@ -1,18 +1,47 @@
-﻿using System;
+﻿using SQLite.Net;
+using SQLite.Net.Platform.WinRT;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MusicPlayer.DataLayer
 {
-    public class DataContext : IDataLayer
+    public class DataContext : IDataLayer, IDisposable
     {
-        private MusicPlayerEntities Context { get; set; }
+        private SQLiteConnection Context { get; set; }
 
-        public DataContext(string connectionName)
+        /// <summary>
+        /// Call to create an instance of the DataContext. Will create the database if it doesnt exists
+        /// </summary>
+        public DataContext()
         {
-            throw new NotImplementedException();
+            var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+
+            //check to see if it exists
+            if(File.Exists(path) == false)
+                //create file
+                SetupDatabase(path);
+            else
+                Context = new SQLiteConnection(new SQLitePlatformWinRT(), path);
+        }
+
+        /// <summary>
+        /// Privately called to create the database for the first time
+        /// </summary>
+        /// <param name="path"></param>
+        private void SetupDatabase(string path)
+        {
+            SQLiteConnection conn = new SQLiteConnection(new SQLitePlatformWinRT(), path);
+            
+            conn.CreateTable<tblTag>();
+            conn.CreateTable<tblLocation>();
+            conn.CreateTable<tblSong>();
+            conn.CreateTable<tblSongTag>();
+            conn.CreateTable<tblTagType>();
+            Context = conn;
         }
 
         public List<tblTag> GetTags(TagParams tagParams)
@@ -63,6 +92,15 @@ namespace MusicPlayer.DataLayer
         public List<tblLocation> GetLocations()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Call to dispose of this connection
+        /// </summary>
+        public void Dispose()
+        {
+            if (Context != null)
+                Context.Dispose();
         }
     }
 }

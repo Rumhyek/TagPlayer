@@ -12,10 +12,11 @@ namespace MusicPlayer.DataLayer
         public List<tblSong> SongList { get; set; }
         public List<tblLocation> LocationList { get; set; }
 
-        public void TestDataContext()
+        public TestDataContext()
         {
             throw new NotImplementedException();
         }
+
         private void LoadTestData()
         {
             throw new NotImplementedException();

@@ -106,7 +106,6 @@
     <Compile Include="BusinessLayer\TagType.cs" />
     <Compile Include="DataLayer\DataContext.cs" />
     <Compile Include="DataLayer\IDataLayer.cs" />
-    <Compile Include="DataLayer\MusicPlayerEntities.cs" />
     <Compile Include="DataLayer\SContext.cs" />
     <Compile Include="DataLayer\SongParams.cs" />
     <Compile Include="DataLayer\TagParams.cs" />

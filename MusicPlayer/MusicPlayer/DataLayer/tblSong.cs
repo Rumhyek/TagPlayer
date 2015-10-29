@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace MusicPlayer.DataLayer
 {
     public class tblSong
     {
+        [PrimaryKey, AutoIncrement]
         public int SongId { get; set; }
         public string Name { get; set; }
         public string RelativePath { get; set; }
