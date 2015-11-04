@@ -38,7 +38,7 @@ namespace MusicPlayer.BusinessLayer
         
         public static List<Song> GetSongs(SongParams song)
         {
-
+            throw new NotImplementedException();
         }
 
         public SongData GetSongData()

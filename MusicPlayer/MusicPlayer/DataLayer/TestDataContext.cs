@@ -6,70 +6,81 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.DataLayer
 {
+    /// <summary>
+    /// The purpose of this class is to populate fake data into the system so we can test our functions
+    /// </summary>
     public class TestDataContext : IDataLayer
     {
         public List<tblTag> TagList { get; set; }
         public List<tblSong> SongList { get; set; }
         public List<tblLocation> LocationList { get; set; }
-
+        public List<tblSongTag> SongTagList { get; set; }
+        public List<tblTagType> TagTypeList { get; set; }
         public TestDataContext()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// This needs to populate TagList, SongList, and LocationList
+        /// </summary>
         private void LoadTestData()
         {
             throw new NotImplementedException();
         }
 
-        public List<tblTag> GetTags(TagParams tagParams)
+        #region IDataLayer
+        //Refer to MusicPlayer.DataLayer.IDataLayer implementation requirements
+
+        List<tblTag> IDataLayer.GetTags(TagParams tagParams)
         {
             throw new NotImplementedException();
         }
 
-        public bool SaveTag(tblTag tag)
+        bool IDataLayer.SaveTag(tblTag tag)
         {
             throw new NotImplementedException();
         }
 
-        public List<tblSong> GetSongs(SongParams songParams)
+        List<tblSong> IDataLayer.GetSongs(SongParams songParams)
         {
             throw new NotImplementedException();
         }
 
-        public bool SaveSong(tblSong song)
+        bool IDataLayer.SaveSong(tblSong song)
         {
             throw new NotImplementedException();
         }
 
-        public bool ConnectSongToTag(int tagId, int songId)
+        bool IDataLayer.ConnectSongToTag(int tagId, int songId)
         {
             throw new NotImplementedException();
         }
 
-        public bool ConnectSongsToTags(List<int> tagIds, List<int> songIds)
+        bool IDataLayer.ConnectSongsToTags(List<int> tagIds, List<int> songIds)
         {
             throw new NotImplementedException();
         }
 
-        public bool RemoveTagsFromSong(int songId, List<int> tagIdsToRemove)
+        bool IDataLayer.RemoveTagsFromSong(int songId, params int[] tagIdsToRemove)
         {
             throw new NotImplementedException();
         }
 
-        public bool RemoveSongsFromTag(int tagId, List<int> songIdsToRemove)
+        bool IDataLayer.RemoveSongsFromTag(int tagId, params int[] songIdsToRemove)
         {
             throw new NotImplementedException();
         }
 
-        public bool SaveLocation(tblLocation location)
+        bool IDataLayer.SaveLocation(tblLocation location)
         {
             throw new NotImplementedException();
         }
 
-        public List<tblLocation> GetLocations()
+        List<tblLocation> IDataLayer.GetLocations()
         {
             throw new NotImplementedException();
-        }
+        } 
+        #endregion
     }
 }

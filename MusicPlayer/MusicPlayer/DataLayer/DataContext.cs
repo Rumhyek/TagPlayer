@@ -43,57 +43,7 @@ namespace MusicPlayer.DataLayer
             conn.CreateTable<tblTagType>();
             Context = conn;
         }
-
-        public List<tblTag> GetTags(TagParams tagParams)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SaveTag(tblTag tag)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<tblSong> GetSongs(SongParams songParams)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SaveSong(tblSong song)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ConnectSongToTag(int tagId, int songId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ConnectSongsToTags(List<int> tagIds, List<int> songIds)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool RemoveTagsFromSong(int songId, List<int> tagIdsToRemove)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool RemoveSongsFromTag(int tagId, List<int> songIdsToRemove)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SaveLocation(tblLocation location)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<tblLocation> GetLocations()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         /// <summary>
         /// Call to dispose of this connection
         /// </summary>
@@ -102,5 +52,59 @@ namespace MusicPlayer.DataLayer
             if (Context != null)
                 Context.Dispose();
         }
+
+        //Refer to MusicPlayer.DataLayer.IDataLayer implementation requirements
+        #region IDataLayer
+
+        List<tblTag> IDataLayer.GetTags(TagParams tagParams)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.SaveTag(tblTag tag)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<tblSong> IDataLayer.GetSongs(SongParams songParams)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.SaveSong(tblSong song)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.ConnectSongToTag(int tagId, int songId)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.ConnectSongsToTags(List<int> tagIds, List<int> songIds)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.RemoveTagsFromSong(int songId, params int[] tagIdsToRemove)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.RemoveSongsFromTag(int tagId, params int[] songIdsToRemove)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IDataLayer.SaveLocation(tblLocation location)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<tblLocation> IDataLayer.GetLocations()
+        {
+            throw new NotImplementedException();
+        } 
+        #endregion
     }
 }
