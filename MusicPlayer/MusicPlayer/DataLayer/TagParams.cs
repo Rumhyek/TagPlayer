@@ -24,17 +24,31 @@ namespace MusicPlayer.DataLayer
         public List<string> TagNames { get; set; }
 
         /// <summary>
-        /// Adds tag ids to filter by to TagIds
+        /// Adds tag ids to TagIds
         /// </summary>
         /// <remarks>
         /// This funciton should make sure TagIds exists. If it doesnt
         /// it should instansiate TagIds
         /// </remarks>
         /// <difficulty>Easy</difficulty>
-        /// <param name="tagIds">The tags</param>
-        public void AddTagIds(params int[] tagIds)
+        /// <param name="input">The tags</param>
+        public void AddTagIds(params int[] input)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < input.Length; i++)
+            {
+                bool hasValue = false;
+                for (int j = 0; j < TagIds.Count; j++)
+                {
+                    if (TagIds[j]==input[i])
+
+                    {
+                        hasValue = true;
+                    }
+                }
+                if (hasValue == false)
+                    TagIds.Add(input[i]);
+
+            }
         }
 
         /// <summary>
